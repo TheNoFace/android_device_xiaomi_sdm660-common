@@ -243,6 +243,10 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm660
+	
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # MSM IRQ Balancer configuration file for SDM660
 PRODUCT_COPY_FILES += \
