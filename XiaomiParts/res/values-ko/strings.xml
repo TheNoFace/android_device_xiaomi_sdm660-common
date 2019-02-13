@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 The Xiaomi-SDM660 Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="advanced_settings">Xiaomi Parts</string>
+    <string name="advanced_settings_summary">추가 설정</string>
+    <string name="camera_title">카메라</string>
+    <string name="camera_hal3_title">Camera2 API 활성화</string>
+    <string name="camera_eis_title">EIS 활성화</string>
+    <string name="display_title">화면</string>
+    <string name="device_kcal_title">화면 색상 조정</string>
+
+    <!-- Ambient Display -->
+    <string name="ambient_display_xiaomi">Xiaomi Doze</string>
+    <string name="advanced_doze_summary">절전모드 자동 해제</string>
+
+    <string name="torch_title">손전등</string>
+    <string name="torch_brightness_title">밝기</string>
+    <string name="vibration_title">햅틱 반응</string>
+    <string name="vibration_strength_title">진동 세기</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">성능</string>
+    <string name="spectrum_title">성능 설정</string>
+    <string name="spectrum_summary">성능 설정을 변경합니다</string>
+    <string name="spectrum_dialogTitle">성능 설정 선택</string>
+</resources>
