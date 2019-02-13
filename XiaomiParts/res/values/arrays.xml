@@ -31,23 +31,4 @@
 		<item>4</item>
 		<item>5</item>
 	</string-array>
-
-	<string-array name="fpaction_enteries">
-		<item>Expand Notification Panel</item>
-		<item>Expand QS</item>
-		<item>Assistant</item>
-		<item>Home</item>
-		<item>Media next</item>
-		<item>Media play/pause</item>
-		<item>Media previous</item>
-	</string-array>
-	<string-array name="fpaction_values">
-		<item>expnp</item>
-		<item>expqs</item>
-		<item>219</item>
-		<item>3</item>
-		<item>87</item>
-		<item>85</item>
-		<item>88</item>
-	</string-array>
 </resources>

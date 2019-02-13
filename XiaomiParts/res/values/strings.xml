@@ -36,12 +36,4 @@
     <string name="spectrum_title">Performance Settings</string>
     <string name="spectrum_summary">Choose your Performance settings</string>
     <string name="spectrum_dialogTitle">Choose your Performance settings</string>
-
-    <string name="fp_title">Fingerprint</string>
-    <string name="fpaction_enabled">Enable custom fingerprint actions</string>
-    <string name="fpshutter_summary">Trigger the camera if it is active</string>
-    <string name="fp_shutter">Fingerprint Shutter</string>
-    <string name="fpaction_dialogTitle">Action</string>
-    <string name="fpaction_summary">Choose Action</string>
-    <string name="fpaction_title">Fingerprint Actions</string>
 </resources>

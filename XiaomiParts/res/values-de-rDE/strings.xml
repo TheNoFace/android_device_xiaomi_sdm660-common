@@ -31,12 +31,4 @@
     <string name="spectrum_title">Leistung Einstellung</string>
     <string name="spectrum_summary">Wähle die Leistungstufe</string>
     <string name="spectrum_dialogTitle">Wähle die Leistungstufe</string>
-
-    <string name="fp_title">Fingerabdrucksensor</string>
-    <string name="fpaction_enabled">Aktiviere Fingerabdruckaktionen</string>
-    <string name="fpshutter_summary">Löse die Kamera aus, falls diese aktiv ist</string>
-    <string name="fp_shutter">Fingerprint Shutter</string>
-    <string name="fpaction_dialogTitle">Aktion</string>
-    <string name="fpaction_summary">Aktion auswählen</string>
-    <string name="fpaction_title">Fingerabdruckaktionen</string>
 </resources>

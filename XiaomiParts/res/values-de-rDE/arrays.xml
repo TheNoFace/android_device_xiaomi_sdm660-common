@@ -22,14 +22,4 @@
         <item>Balance</item>
         <item>Energiesparmodus</item>
     </string-array>
-
-    <string-array name="fpaction_enteries">
-        <item>Benachrichtigungs Panel</item>
-        <item>Schnelleinstellungen</item>
-        <item>Assistent</item>
-        <item>Home</item>
-        <item>Media next</item>
-        <item>Media play/pause</item>
-        <item>Media previous</item>
-    </string-array>
 </resources>

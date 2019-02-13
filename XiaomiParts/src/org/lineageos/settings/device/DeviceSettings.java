@@ -20,25 +20,20 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.ListPreference;
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private final String ENABLE_HAL3_KEY = "hal3";
     private final String ENABLE_EIS_KEY = "eis";
-    final static String ENABLE_FPACTION_KEY = "fpaction_enabled";
-    final static String FP_SHUTTER_KEY = "fp_shutter";
-    final static String FPACTION_KEY = "fpaction";
     final static String TORCH_BRIGHTNESS_KEY = "torch_brightness";
     final static String VIBRATION_STRENGTH_KEY = "vibration_strength";
-    private final String SPECTRUM_KEY = "spectrum";
 
     private final String HAL3_SYSTEM_PROPERTY = "persist.vendor.camera.HAL3.enabled";
     private final String EIS_SYSTEM_PROPERTY = "persist.vendor.camera.eis.enable";
-    private final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
@@ -49,12 +44,11 @@ public class DeviceSettings extends PreferenceFragment implements
     private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
     private final String KEY_DEVICE_KCAL = "device_kcal";
     private final String KEY_DEVICE_KCAL_PACKAGE_NAME = "org.lineageos.settings.kcal";
+    private final String SPECTRUM_KEY = "spectrum";
+    private final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     private SwitchPreference mEnableHAL3;
     private SwitchPreference mEnableEIS;
-    static SwitchPreference mEnableFpAction;
-    static SwitchPreference mFpShutter;
-    static ListPreference mFpAction;
     private TorchSeekBarPreference mTorchBrightness;
     private VibrationSeekBarPreference mVibrationStrength;
     private ListPreference mSPECTRUM;
@@ -73,16 +67,6 @@ public class DeviceSettings extends PreferenceFragment implements
         mEnableEIS = (SwitchPreference) findPreference(ENABLE_EIS_KEY);
         mEnableEIS.setChecked(FileUtils.getProp(EIS_SYSTEM_PROPERTY, false));
         mEnableEIS.setOnPreferenceChangeListener(this);
-
-        mEnableFpAction = (SwitchPreference) findPreference(ENABLE_FPACTION_KEY);
-        mEnableFpAction.setOnPreferenceChangeListener(this);
-
-        mFpShutter = (SwitchPreference) findPreference(FP_SHUTTER_KEY);
-        mFpShutter.setOnPreferenceChangeListener(this);
-
-        mFpAction = (ListPreference) findPreference(FPACTION_KEY);
-        mFpAction.setSummary(mFpAction.getEntry());
-        mFpAction.setOnPreferenceChangeListener(this);
 
         mTorchBrightness = (TorchSeekBarPreference) findPreference(TORCH_BRIGHTNESS_KEY);
         mTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) && FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
@@ -125,21 +109,6 @@ public class DeviceSettings extends PreferenceFragment implements
             case ENABLE_EIS_KEY:
                 mEnableEIS.setChecked((Boolean) value);
                 FileUtils.setProp(EIS_SYSTEM_PROPERTY, (Boolean) value);
-                break;
-
-            case ENABLE_FPACTION_KEY:
-                mEnableFpAction.setChecked((Boolean) value);
-                mFpAction.setEnabled((Boolean) value);
-                mFpShutter.setEnabled((Boolean) value);
-                break;
-
-            case FP_SHUTTER_KEY:
-                mFpShutter.setChecked((Boolean) value);
-                break;
-
-            case FPACTION_KEY:
-                mFpAction.setValue((String) value);
-                mFpAction.setSummary(mFpAction.getEntry());
                 break;
 
             case TORCH_BRIGHTNESS_KEY:
